@@ -12,4 +12,10 @@ class StrTest extends TestCase
         $this->assertEquals('This is my name', Str::after('This is my name', 'something'));
         $this->assertEquals(' my name', Str::after('This is my name', 'This is'));
     }
+
+    public function testAfterLast()
+    {
+        $this->assertEquals('App\Http\Controllers\Controller', Str::afterLast('App\Http\Controllers\Controller', 'Model'));
+        $this->assertEquals('Controller', Str::afterLast('App\Http\Controllers\Controller', '\\'));
+    }
 }
